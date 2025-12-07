@@ -2,7 +2,6 @@
 
 Chào mừng đến với dự án **Blockchain Game đơn giản sử dụng IOTA Tangle**. Đây là một ứng dụng web mô phỏng (Simulation DApp) cho phép người chơi tham gia trò chơi dự đoán số, trong đó mọi kết quả và lịch sử giao dịch được thiết kế để lưu trữ minh bạch trên mạng lưới IOTA Tangle.
 
-![IOTA Game Banner](https://via.placeholder.com/1200x400/09090b/d946ef?text=IOTA+Tangle+Game+Cyberpunk+UI)
 
 ## 📖 Giới thiệu
 
@@ -47,8 +46,8 @@ Giao diện được thiết kế theo phong cách **Cyberpunk Neon** hiện đ�
 
 1.  **Clone dự án:**
     ```bash
-    git clone https://github.com/anhtuanpc/pizza_box.git
-    cd pizza_box
+    git clone https://github.com/Huynbbi09/IOTA-Tangle-Game-.git
+    cd IOTA-Tangle-GameGame
     ```
 
 2.  **Cài đặt thư viện:**
@@ -64,9 +63,9 @@ Giao diện được thiết kế theo phong cách **Cyberpunk Neon** hiện đ�
 
 4.  **Chạy dự án:**
     ```bash
-    npm start
+    npm run dev
     ```
-    Truy cập trình duyệt tại `http://localhost:3000` (hoặc cổng tương ứng).
+    Truy cập trình duyệt tại `http://localhost:3001/` (hoặc cổng tương ứng).
 
 ## 📂 Cấu trúc thư mục
 
