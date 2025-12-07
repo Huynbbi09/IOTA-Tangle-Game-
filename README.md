@@ -1,107 +1,83 @@
-# IOTA Tangle Game - Dự Đoán Số May Mắn 🎲
+# IOTA Tangle Game - Lucky Number Prediction 🎲
 
-Chào mừng đến với dự án **Blockchain Game đơn giản sử dụng IOTA Tangle**. Đây là một ứng dụng web mô phỏng (Simulation DApp) cho phép người chơi tham gia trò chơi dự đoán số, trong đó mọi kết quả và lịch sử giao dịch được thiết kế để lưu trữ minh bạch trên mạng lưới IOTA Tangle.
+Welcome to the **Simple Blockchain Game using IOTA Tangle**. This is a simulation DApp (Decentralized Application) that allows players to participate in a number prediction game, where all results and transaction history are designed to be stored transparently on the IOTA Tangle network.
 
+## 📖 Introduction
 
-## 📖 Giới thiệu
+This project illustrates how a decentralized game operates without traditional intermediary servers. Instead of saving scores to a standard Database (SQL/Mongo), we "write" the results onto the **IOTA Tangle** - a distributed ledger with no transaction fees (feeless).
 
-Dự án này minh họa cách một trò chơi phi tập trung hoạt động mà không cần máy chủ trung gian truyền thống. Thay vì lưu điểm số vào Database (SQL/Mongo), chúng ta "ghi" kết quả lên **IOTA Tangle** - một sổ cái phân tán (Distributed Ledger) không mất phí giao dịch (feeless).
+The interface is designed in a modern **Cyberpunk Neon** style, providing a futuristic technological feel.
 
-Giao diện được thiết kế theo phong cách **Cyberpunk Neon** hiện đại, mang lại cảm giác công nghệ tương lai.
+## ✨ Key Features
 
-## ✨ Tính năng nổi bật
+1.  **Crypto Wallet Simulation (IOTA Wallet):**
+    * Users can connect a virtual wallet.
+    * Displays wallet address and balance (MIOTA).
+2.  **Game Smart Contract Mechanism:**
+    * Players select a number between 1 and 100.
+    * The system generates a random result.
+    * **Winning Rule:** If the actual number falls within a range of **±5** of the predicted number -> Win (Double the wager).
+3.  **Transparent History (Tangle History):**
+    * Every gameplay turn generates a (simulated) `Message ID` representing a record on the Tangle.
+    * Displays a public list of wins and losses.
+4.  **AI Commentary (Google Gemini Integration):**
+    * Uses AI to provide humorous, sarcastic, or congratulatory commentary based on match results in real-time.
+5.  **Interactive Interface (UI/UX):**
+    * Beautiful Neon/Glow effects.
+    * Responsive (mobile/desktop compatible).
+    * Intuitive status notifications.
 
-1.  **Mô phỏng Ví Crypto (IOTA Wallet):**
-    *   Người dùng có thể kết nối ví ảo.
-    *   Hiển thị địa chỉ ví và số dư (MIOTA).
-2.  **Cơ chế Game Smart Contract:**
-    *   Người chơi chọn một số từ 1 đến 100.
-    *   Hệ thống sinh ngẫu nhiên kết quả.
-    *   **Luật thắng:** Nếu số thực tế nằm trong khoảng **±5** so với số dự đoán -> Thắng (Nhân đôi tiền cược).
-3.  **Lịch sử minh bạch (Tangle History):**
-    *   Mọi lượt chơi đều sinh ra một `Message ID` (giả lập) đại diện cho bản ghi trên Tangle.
-    *   Hiển thị danh sách thắng/thua công khai.
-4.  **AI Commentary (Tích hợp Google Gemini):**
-    *   Sử dụng AI để đưa ra các bình luận hài hước, châm biếm hoặc chúc mừng dựa trên kết quả trận đấu theo thời gian thực.
-5.  **Giao diện Tương tác (UI/UX):**
-    *   Hiệu ứng Neon/Glow đẹp mắt.
-    *   Responsive (tương thích mobile/desktop).
-    *   Thông báo trạng thái trực quan.
+## 🛠 Tech Stack
 
-## 🛠 Công nghệ sử dụng
+* **Frontend:** React (v19), TypeScript.
+* **Styling:** Tailwind CSS (Custom Theme: Zinc & IOTA Neon).
+* **AI Integration:** Google GenAI SDK (Gemini 2.5 Flash).
+* **Icons:** Lucide React.
+* **Blockchain Simulation:** `iotaService.ts` (Simulates network latency and transaction validation).
 
-*   **Frontend:** React (v19), TypeScript.
-*   **Styling:** Tailwind CSS (Theme tùy chỉnh: Zinc & IOTA Neon).
-*   **AI Integration:** Google GenAI SDK (Gemini 2.5 Flash).
-*   **Icons:** Lucide React.
-*   **Mô phỏng Blockchain:** `iotaService.ts` (Giả lập độ trễ mạng và xác thực giao dịch).
+## 🚀 Installation and Running
 
-## 🚀 Cài đặt và Chạy dự án
+### Prerequisites
+* Node.js (version 18 or higher).
+* An API Key from Google AI Studio (for the AI commentary feature).
 
-### Yêu cầu
-*   Node.js (phiên bản 18 trở lên).
-*   Một API Key từ Google AI Studio (cho tính năng bình luận AI).
+### Steps
 
-### Các bước thực hiện
-
-1.  **Clone dự án:**
+1.  **Clone the project:**
     ```bash
-    git clone https://github.com/Huynbbi09/IOTA-Tangle-Game-.git
+    git clone [https://github.com/Huynbbi09/IOTA-Tangle-Game-.git](https://github.com/Huynbbi09/IOTA-Tangle-Game-.git)
     cd IOTA-Tangle-GameGame
     ```
 
-2.  **Cài đặt thư viện:**
+2.  **Install dependencies:**
     ```bash
     npm install
     ```
 
-3.  **Cấu hình API Key:**
-    *   Tạo file `.env` hoặc thiết lập biến môi trường:
+3.  **Configure API Key:**
+    * Create an `.env` file or set the environment variable:
     ```env
     API_KEY=your_google_gemini_api_key_here
     ```
 
-4.  **Chạy dự án:**
+4.  **Run the project:**
     ```bash
     npm run dev
     ```
-    Truy cập trình duyệt tại `http://localhost:3001/` (hoặc cổng tương ứng).
+    Access the browser at `http://localhost:3001/` (or the corresponding port).
 
-## 📂 Cấu trúc thư mục
+## 📂 Folder Structure
 
 ```text
 /
-├── index.html              # Entry point, cấu hình Tailwind
+├── index.html              # Entry point, Tailwind configuration
 ├── index.tsx               # React root
-├── App.tsx                 # Giao diện chính và logic game
-├── types.ts                # Định nghĩa kiểu dữ liệu (TypeScript Interfaces)
+├── App.tsx                 # Main interface and game logic
+├── types.ts                # Data type definitions (TypeScript Interfaces)
 ├── services/
-│   ├── iotaService.ts      # Giả lập logic Blockchain & Smart Contract
-│   └── geminiService.ts    # Kết nối Google Gemini AI
+│   ├── iotaService.ts      # Simulates Blockchain & Smart Contract logic
+│   └── geminiService.ts    # Google Gemini AI connection
 ├── components/
-│   ├── WalletButton.tsx    # Nút kết nối ví và hiển thị số dư
-│   └── HistoryList.tsx     # Bảng hiển thị lịch sử đấu
-└── metadata.json           # Thông tin dự án
-```
-
-## 🧠 Cơ chế hoạt động (Logic Game)
-
-Mặc dù đây là bản demo giao diện (Frontend), logic "Smart Contract" được mô phỏng như sau trong `iotaService.ts`:
-
-1.  **Đặt cược:** Kiểm tra số dư ví người dùng.
-2.  **Random Number Generation (RNG):** Máy tính tạo số ngẫu nhiên (1-100).
-3.  **So khớp:**
-    *   `|Số_Người_Chọn - Số_Kết_Quả| <= 5` => **THẮNG**.
-    *   Ngược lại => **THUA**.
-4.  **Ghi Tangle:** Tạo một mã hash giả lập (ví dụ: `0x1a2b...`) và đẩy vào mảng lịch sử kèm timestamp.
-5.  **AI phản hồi:** Gửi kết quả sang Gemini để lấy câu bình luận tiếng Việt.
-
-## 🔮 Hướng phát triển (Roadmap)
-
-*   [ ] Tích hợp **IOTA SDK** thật để ghi dữ liệu lên mạng IOTA Testnet/Shimmer.
-*   [ ] Viết Smart Contract thực tế bằng ngôn ngữ **Rust** (cho mạng IOTA SC).
-*   [ ] Thêm tính năng Multiplayer (Nhiều người chơi cùng lúc).
-*   [ ] Phát hành Token thưởng riêng cho game.
-
----
-*Dự án được tạo bởi [Khuất Thu Huyền] - Demo khả năng tích hợp Web3 và AI.*
+│   ├── WalletButton.tsx    # Button to connect wallet and display balance
+│   └── HistoryList.tsx     # Table displaying match history
+└── metadata.json           # Project information
